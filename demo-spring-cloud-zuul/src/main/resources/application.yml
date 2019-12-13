@@ -1,0 +1,14 @@
+server:
+  port: 50000
+spring:
+  application:
+    name: api-gateway
+zuul:
+  routes:
+    service-ribbon:
+      path: /ribbon-service/**
+      serviceId: service-ribbon
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8763

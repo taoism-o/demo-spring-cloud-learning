@@ -1,0 +1,17 @@
+server:
+  port: 10001
+spring:
+  application:
+    name: sleuth-ziplin
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411
+eureka:
+  client:
+    service-url:
+      default-zone: https://localhost:8761/eureka
